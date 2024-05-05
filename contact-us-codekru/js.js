@@ -21,7 +21,7 @@ function onSubmit() {
     const isErrorFullname = checkFormField('fullName');
     const isErrorEmail = checkFormField('email');
 
-    if (isErrorFullname || isErrorEmail || isErrorPhone) {
+    if (isErrorFullname || isErrorEmail) {
         document.getElementById('containerForm').classList.remove('d-none');
         document.getElementById('containerThank').classList.add('d-none');
     } else {
