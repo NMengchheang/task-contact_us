@@ -35,6 +35,9 @@ function resend() {
     document.getElementById('containerForm').classList.remove('d-none');
     document.getElementById('containerThank').classList.add('d-none');
 
+
+
+    //
     // Clear form fields
     document.getElementById('fullName').value = '';
     document.getElementById('email').value = '';
