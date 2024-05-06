@@ -20,8 +20,9 @@ function checkFormField(fieldId, errorField='') {
 function onSubmit() {
     const isErrorFullname = checkFormField('fullName');
     const isErrorEmail = checkFormField('email');
+    const isErrorPhone = checkFormField('phone');
 
-    if (isErrorFullname || isErrorEmail) {
+    if (isErrorFullname || isErrorEmail || isErrorPhone) {
         document.getElementById('containerForm').classList.remove('d-none');
         document.getElementById('containerThank').classList.add('d-none');
     } else {
@@ -33,4 +34,10 @@ function onSubmit() {
 function resend() {
     document.getElementById('containerForm').classList.remove('d-none');
     document.getElementById('containerThank').classList.add('d-none');
+
+    // Clear form fields
+    document.getElementById('fullName').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('message').value = '';
 }
